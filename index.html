@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monmouth Holiday Rentals - Property Management System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .feature-item {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        @media screen and (max-width: 768px) {
+            .feature-item {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monmouth Holiday Rentals</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="members.html">Members Area</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Welcome to Monmouth Holiday Rentals PMS</h2>
+        <p>Manage your holiday lets efficiently with our co-operative property management system. Designed for property owners in the beautiful seaside town of Monmouth-On-Sea, our system helps you streamline your rental operations.</p>
+        <h3>Key Features for Co-operative Members:</h3>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h4>Property Management</h4>
+                <p>Easily manage your properties, including details, amenities, and pricing.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Booking Management</h4>
+                <p>Handle reservations, check-ins, and check-outs for your properties.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Co-operative Benefits</h4>
+                <p>Access shared resources and benefit from collective marketing efforts.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Financial Reporting</h4>
+                <p>Access detailed reports and analytics to make informed decisions about your rentals.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Member Communication</h4>
+                <p>Stay connected with other co-operative members and administration.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Multi-channel Integration</h4>
+                <p>Connect with popular booking platforms to increase your visibility and bookings.</p>
+            </div>
+        </div>
+        <h3>Co-operative Updates:</h3>
+        <ul>
+            <li>Next member meeting: July 15, 2024</li>
+            <li>New marketing campaign launching next month</li>
+            <li>Updated cleaning protocols now available in the Members Area</li>
+        </ul>
+        <a href="properties.html" class="btn">Manage Your Properties</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Monmouth Holiday Rentals</h3>
+                <p>Your gateway to memorable stays in <br> Monmouth-On-Sea.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="members.html">Members Area</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@monmouthholidays.co.uk</p>
+                <p>Phone: (01234) 567-890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Monmouth Holiday Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const featureItems = document.querySelectorAll('.feature-item');
+            featureItems.forEach(item => {
+                item.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.05)';
+                    this.style.transition = 'transform 0.3s ease';
+                });
+                item.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

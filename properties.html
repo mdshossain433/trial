@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Properties - Monmouth Holiday Rentals PMS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .property {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .property img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .property h3 {
+            margin-top: 0;
+        }
+        .property p {
+            margin: 5px 0;
+        }
+        .property .btn {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monmouth Holiday Rentals</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="bookings.html">Bookings</a></li>
+            <li><a href="members.html">Members Area</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Manage Your Properties</h2>
+        <p>View and manage your properties in the Monmouth-On-Sea co-operative.</p>
+        <div class="property-grid" id="propertyGrid">
+            <!-- Properties will be dynamically added here -->
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Monmouth Holiday Rentals</h3>
+                <p>Your gateway to memorable stays in <br> Monmouth-On-Sea.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="members.html">Members Area</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@monmouthholidays.co.uk</p>
+                <p>Phone: (01234) 567-890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Monmouth Holiday Rentals. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    const properties = [
+        { id: 1, name: "Seaside Cottage", type: "Whole House", bedrooms: 3, owner: "Jane Smith", status: "Booked", price: 150, image: "image/Seaside Cottage.png" },
+        { id: 2, name: "Harbour View Apartment", type: "Apartment", bedrooms: 2, owner: "John Doe", status: "Available", price: 120, image: "image/Harbour View Apartment.png" },
+        { id: 3, name: "Cozy Studio", type: "Studio", bedrooms: 1, owner: "Emma Wilson", status: "Booked", price: 80, image: "image/Cozy Studio.png" },
+        { id: 4, name: "Beachfront Villa", type: "Whole House", bedrooms: 4, owner: "Michael Brown", status: "Available", price: 200, image: "image/Beachfront Villa.png" },
+        { id: 5, name: "Fisherman's Cottage", type: "Whole House", bedrooms: 2, owner: "Sarah Johnson", status: "Booked", price: 130, image: "image/Fisherman's Cottage.png" },
+        { id: 6, name: "Luxury Penthouse", type: "Apartment", bedrooms: 3, owner: "David Lee", status: "Available", price: 180, image: "image/Luxury Penthouse.png" },
+        { id: 7, name: "Quaint Townhouse", type: "Whole House", bedrooms: 3, owner: "Lisa Taylor", status: "Booked", price: 140, image: "image/Quaint Townhouse.png" },
+        { id: 8, name: "Seaside Bungalow", type: "Whole House", bedrooms: 2, owner: "Robert White", status: "Available", price: 110, image: "image/Seaside Bungalow.png" },
+        { id: 9, name: "Marina Apartment", type: "Apartment", bedrooms: 2, owner: "Emily Clark", status: "Booked", price: 130, image: "image/Marina Apartment.png" },
+        { id: 10, name: "Clifftop Retreat", type: "Whole House", bedrooms: 3, owner: "Thomas Green", status: "Available", price: 170, image: "image/Clifftop Retreat.png" },
+        { id: 11, name: "Coastal Condo", type: "Apartment", bedrooms: 1, owner: "Olivia Harris", status: "Booked", price: 90, image: "image/Coastal Condo.png" },
+        { id: 12, name: "Victorian Guesthouse", type: "Whole House", bedrooms: 5, owner: "William Turner", status: "Available", price: 220, image: "image/Victorian Guesthouse.png" },
+        { id: 13, name: "Surf Shack", type: "Whole House", bedrooms: 2, owner: "Sophie Martin", status: "Booked", price: 100, image: "image/Surf Shack.png" },
+        { id: 14, name: "Lighthouse Keeper's Cottage", type: "Whole House", bedrooms: 2, owner: "George Baker", status: "Available", price: 140, image: "image/Lighthouse Keeper's Cottage.png" },
+        { id: 15, name: "Beach Hut Studio", type: "Studio", bedrooms: 1, owner: "Emma Wilson", status: "Booked", price: 70, image: "image/Beach Hut Studio.png" },
+        { id: 16, name: "Sailor's Rest", type: "Whole House", bedrooms: 3, owner: "John Doe", status: "Available", price: 160, image: "image/Sailor's Rest.png" },
+        { id: 17, name: "Coastal View Loft", type: "Apartment", bedrooms: 2, owner: "Sarah Johnson", status: "Booked", price: 140, image: "image/Coastal View Loft.png" },
+        { id: 18, name: "Pebble Cottage", type: "Whole House", bedrooms: 2, owner: "Michael Brown", status: "Available", price: 120, image: "image/Pebble Cottage.png" }
+    ];
+
+    function renderProperties() {
+        const propertyGrid = document.getElementById('propertyGrid');
+        propertyGrid.innerHTML = '';
+        properties.forEach(property => {
+            const propertyElement = document.createElement('div');
+            propertyElement.className = 'property';
+            propertyElement.innerHTML = `
+                <img src="${property.image}" alt="${property.name}">
+                <h3>${property.name}</h3>
+                <p><strong>Type:</strong> ${property.type}</p>
+                <p><strong>Bedrooms:</strong> ${property.bedrooms}</p>
+                <p><strong>Owner:</strong> ${property.owner}</p>
+                <p><strong>Status:</strong> ${property.status}</p>
+                <p><strong>Price:</strong> £${property.price} per night</p>
+                <a href="#" class="btn" onclick="editProperty(${property.id})">Edit Details</a>
+                <a href="#" class="btn" onclick="manageAvailability(${property.id})">Manage Availability</a>
+            `;
+            propertyGrid.appendChild(propertyElement);
+        });
+    }
+
+    function editProperty(id) {
+        alert(`Edit property details for property ID: ${id}`);
+        // Implement property editing functionality
+    }
+
+    function manageAvailability(id) {
+        alert(`Manage availability for property ID: ${id}`);
+        // Implement availability management functionality
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProperties);
+</script>
+
+</body>
+</html>
